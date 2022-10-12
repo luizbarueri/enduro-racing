@@ -1,13 +1,17 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
+import logo from './logo-enduro-editado.png';
 import './App.css';
 
+const db = require('./db.json');
+
 function App() {
+  const result = db.find((cliente) => cliente.id === '1')
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          resultado API <code>{JSON.stringify(result)}</code>
         </p>
         <a
           className="App-link"
